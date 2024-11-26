@@ -1,0 +1,128 @@
+/* Style général */
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .residence-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .residence-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .residence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .residence-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .residence-status {
+    font-size: 16px;
+    color: #555;
+  }
+  .location-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .location-button:hover {
+    background-color: #45a049;
+  }
+  .status-available {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-construction {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .status-sold {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .status-unknown {
+    color: gray;
+    font-weight: bold;
+  }
+  
+  /* Ajouter un espacement pour les icônes */
+  .status-icon {
+    margin: 10px 0;
+  }
+  .like-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .like-button:hover {
+    background-color: #e73370;
+  }
+  .residence-image {
+    width: 100%; /* Ajuste à la largeur du conteneur */
+    max-width: 300px; /* Limite la largeur maximale */
+    height: auto; /* Garde les proportions */
+    border-radius: 8px; /* Arrondit légèrement les coins */
+    margin-bottom: 10px; /* Ajoute un espace sous l'image */
+    object-fit: cover; /* Coupe l'image pour remplir le conteneur sans distorsion */
+    display: block; /* Centrer l'image (utile si parent est en flex ou grid) */
+  }  
+
+  .residences-table th, 
+.residences-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  margin: 20px auto;
+  justify-content: center;
+
+}
+.residences-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.table-image {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
