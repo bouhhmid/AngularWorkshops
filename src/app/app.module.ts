@@ -1,24 +1,44 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './products/products.component';
+import { FormsModule } from '@angular/forms'; // 
 import { ResidencesComponent } from './residences/residences.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { WhislistComponent } from './wishList/whislist.component';
+import { ResidenceDetailsComponent } from './residence-details/residence-details.component';
+import { ApartmentsComponent } from './apartments/apartments/apartments.component';
+import { ApartmentsByResidenceComponent } from './apartments/apartments-by-residence/apartments-by-residence.component';
+import { AddApartmentComponent } from './apartments/add-apartment/add-apartment.component';
+import { AddResidenceComponent } from './add-residence/add-residence.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { Router } from '@angular/router';
+
+// Importez votre service
+import { ListOfResidencesService } from './list-of-residences.service';  // Le chemin peut être ajusté en fonction de votre projet
 
 @NgModule({
   declarations: [
-    AppComponent,         // Déclaration du composant principal
-    ResidencesComponent   // Déclaration du composant ResidencesComponent
+    AppComponent,
+    ProductsComponent,
+    ResidencesComponent,
+    NavbarComponent,
+    WhislistComponent,
+    ResidenceDetailsComponent,
+    ApartmentsComponent,
+    ApartmentsByResidenceComponent,
+    AddApartmentComponent,
+    AddResidenceComponent,
   ],
   imports: [
-    BrowserModule,        // Nécessaire pour exécuter l'application Angular dans un navigateur
-    AppRoutingModule,     // Module de gestion des routes
-    FormsModule           // Nécessaire pour utiliser [(ngModel)] dans les formulaires
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,         // Pour utiliser ngModel dans les formulaires template-driven
+    ReactiveFormsModule   // Pour utiliser les formulaires réactifs
   ],
-  providers: [],          // Liste des services disponibles dans l'application
-  bootstrap: [AppComponent] // Composant principal qui démarre l'application
+  providers: [ListOfResidencesService], // Déclarez ici le service pour qu'il soit injecté dans l'application
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-

@@ -1,0 +1,83 @@
+<div class="container">
+    <form [formGroup]="apartmentForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="apartNum" class="form-label">Apartment Number</label>
+        <input
+          type="number"
+          id="apartNum"
+          class="form-control"
+          formControlName="apartNum"
+        />
+       
+      </div>
+  
+      <div class="mb-3">
+        <label for="floorNum" class="form-label">Floor Number</label>
+        <input
+          type="number"
+          id="floorNum"
+          class="form-control"
+          formControlName="floorNum"
+        />
+       
+      </div>
+  
+      <div class="mb-3">
+        <label for="surface" class="form-label">Surface Area (m²)</label>
+        <input
+          type="number"
+          id="surface"
+          class="form-control"
+          formControlName="surface"
+        />
+       
+      </div>
+  
+      <div class="mb-3">
+        <label for="terrace" class="form-label">Terrace?</label>
+        <input
+          type="checkbox"
+          id="terrace"
+          class="form-check-input"
+          formControlName="terrace"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="surfaceterrace" class="form-label">Terrace Surface</label>
+        <input
+          type="number"
+          id="surfaceterrace"
+          class="form-control"
+          formControlName="surfaceterrace"
+        />
+       
+      </div>
+  
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input
+          type="text"
+          id="category"
+          class="form-control"
+          formControlName="category"
+        />
+       
+      </div>
+  
+      <div class="mb-3">
+        <label for="ResidenceId" class="form-label">Residence ID</label>
+        <input
+          type="number"
+          id="ResidenceId"
+          class="form-control"
+          formControlName="ResidenceId"
+         
+        />
+       
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="apartmentForm.invalid">Submit</button>
+    </form>
+  </div>
+  
